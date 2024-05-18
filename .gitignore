@@ -1,0 +1,5 @@
+
+*.class
+*.bmp
+*.fxml
+.DS_Store

@@ -17,7 +17,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="org.reflections:reflections:0.9.11" level="project" />
+    <orderEntry type="library" name="reflections-0.9.11" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
