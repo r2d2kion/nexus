@@ -16,6 +16,8 @@ public class Sahoj extends LinearOpMode {
     private DcMotor m3 = null;
     private DcMotor m4 = null;
 
+    private double motorSpeed = 1.0;
+
     @Override
     public void runOpMode() {
 
@@ -33,56 +35,56 @@ public class Sahoj extends LinearOpMode {
         }
     }
     private void forward () {
-        m1.setPower(0.5);
-        m2.setPower(0.5);
-        m3.setPower(0.5);
-        m4.setPower(0.5);
+        m1.setPower(motorSpeed);
+        m2.setPower(motorSpeed);
+        m3.setPower(motorSpeed);
+        m4.setPower(motorSpeed);
         sleep(2000);
     }
 
     private void backward () {
-        m1.setPower(-0.5);
-        m2.setPower(-0.5);
-        m3.setPower(-0.5);
-        m4.setPower(-0.5);
+        m1.setPower(-motorSpeed);
+        m2.setPower(-motorSpeed);
+        m3.setPower(-motorSpeed);
+        m4.setPower(-motorSpeed);
         sleep(1000);
     }
 
     private void leftTurnback () {
-        m1.setPower(-0.5);
-        m2.setPower(0.5);
-        m3.setPower(-0.5);
-        m4.setPower(0.5);
+        m1.setPower(-motorSpeed);
+        m2.setPower(motorSpeed);
+        m3.setPower(-motorSpeed);
+        m4.setPower(motorSpeed);
         sleep(1000);
     }
     private void rightTurnback () {
-        m1.setPower(0.5);
-        m2.setPower(-0.5);
-        m3.setPower(0.5);
-        m4.setPower(-0.5);
+        m1.setPower(motorSpeed);
+        m2.setPower(-motorSpeed);
+        m3.setPower(motorSpeed);
+        m4.setPower(-motorSpeed);
         sleep(1000);
     }
 
     private void sidewaysLeft () {
-        m1.setPower(-0.5);
-        m2.setPower(0.5);
-        m3.setPower(0.5);
-        m4.setPower(-0.5);
+        m1.setPower(-motorSpeed);
+        m2.setPower(motorSpeed);
+        m3.setPower(motorSpeed);
+        m4.setPower(-motorSpeed);
         sleep(1000);
 
     }
     private void sidewaysRight () {
-        m1.setPower(0.5);
-        m2.setPower(-0.5);
-        m3.setPower(-0.5);
-        m4.setPower(0.5);
+        m1.setPower(motorSpeed);
+        m2.setPower(-motorSpeed);
+        m3.setPower(-motorSpeed);
+        m4.setPower(motorSpeed);
         sleep(1000);
     }
     private void frontdiagonalright() {
-        m1.setPower(0.5);
+        m1.setPower(motorSpeed);
         m2.setPower(0);
         m3.setPower(0);
-        m4.setPower(-0.5);
+        m4.setPower(-motorSpeed);
         sleep(1000);
     }
 }
