@@ -20,10 +20,10 @@ public class Krishna extends LinearOpMode {
 
         m1=hardwareMap.get(DcMotor.class, "front_left_motor");
         m2=hardwareMap.get(DcMotor.class, "front_right_motor");
-        m3=hardwareMap.get(DcMotor.class, "back_right_motor");
-        m4=hardwareMap.get(DcMotor.class, "back_left_motor");
+        m3=hardwareMap.get(DcMotor.class, "back_left_motor");
+        m4=hardwareMap.get(DcMotor.class, "back_right_motor");
         m1.setDirection(DcMotor.Direction.REVERSE);
-        m4.setDirection(DcMotor.Direction.REVERSE);
+        m3.setDirection(DcMotor.Direction.REVERSE);
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
         // run until the end of the match (driver presses STOP)
@@ -32,9 +32,9 @@ public class Krishna extends LinearOpMode {
             //double leftPower;
             forward();
             //telemetryUpdate();
-            backward();
+            //backward();
             //forward();
-            //turnback();
+            turnback();
             //forward();
             //telemetryUpdate();
         }
@@ -61,10 +61,10 @@ public class Krishna extends LinearOpMode {
         sleep(2000);
     }
     private void turnback() {
-        m1.setDirection(DcMotor.Direction.REVERSE);
-        m2.setDirection(DcMotor.Direction.FORWARD);
-        m3.setDirection(DcMotor.Direction.REVERSE);
-        m4.setDirection(DcMotor.Direction.FORWARD);
+//        m1.setDirection(DcMotor.Direction.FORWARD);
+//        m2.setDirection(DcMotor.Direction.FORWARD);
+//        m3.setDirection(DcMotor.Direction.FORWARD);
+//        m4.setDirection(DcMotor.Direction.FORWARD);
         m1.setPower(-1);
         m2.setPower(1);
         m3.setPower(-1);
