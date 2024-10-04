@@ -11,7 +11,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.*;
  * Example OpMode. Demonstrates use of gyro, color sensor, encoders, and telemetry.
  *
  */
-@Disabled
+//@Disabled
 @TeleOp(name = "two wheel demo linear", group = "TwoWheel")
 public class TwoWheelDemoLinear extends LinearOpMode {
 
@@ -23,8 +23,8 @@ public class TwoWheelDemoLinear extends LinearOpMode {
     DistanceSensor frontDistance, leftDistance, backDistance, rightDistance;
 
     public void runOpMode() {
-        left = (DcMotorEx)hardwareMap.dcMotor.get("left_motor");
-        right = (DcMotorEx)hardwareMap.dcMotor.get("right_motor");
+        left = (DcMotorEx)hardwareMap.dcMotor.get("front_left_motor");
+        right = (DcMotorEx)hardwareMap.dcMotor.get("front_right_motor");
         left.setDirection(DcMotor.Direction.REVERSE);
         imu = hardwareMap.get(BNO055IMU.class, "imu");
         backServo = hardwareMap.servo.get("back_servo");

@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
 
-@Disabled
+//@Disabled
 @TeleOp(name = "Square Omni Demo", group = "Square Omni")
 public class SquareOmniDemo extends LinearOpMode {
 
@@ -17,10 +17,10 @@ public class SquareOmniDemo extends LinearOpMode {
     private IMU imu;
 
     public void runOpMode(){
-        left = hardwareMap.get(DcMotorEx.class, "left_motor");
-        right = hardwareMap.get(DcMotorEx.class, "right_motor");
-        front = hardwareMap.get(DcMotorEx.class, "front_motor");
-        back = hardwareMap.get(DcMotorEx.class, "back_motor");
+        left = hardwareMap.get(DcMotorEx.class, "front_left_motor");
+        right = hardwareMap.get(DcMotorEx.class, "front_right_motor");
+        front = hardwareMap.get(DcMotorEx.class, "back_left_motor");
+        back = hardwareMap.get(DcMotorEx.class, "back_right_motor");
         right.setDirection(DcMotorSimple.Direction.REVERSE);
         back.setDirection(DcMotorSimple.Direction.REVERSE);
         imu = hardwareMap.get(IMU.class, "imu");
